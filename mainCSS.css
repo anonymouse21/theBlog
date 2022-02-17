@@ -1,7 +1,7 @@
 body {
 	 background-color: black;
-	 background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
 	 margin: 0;
+	 height: auto;
 	 overflow-x: hidden;
 	 overflow-y: auto;
 	 padding: 2rem;
@@ -9,17 +9,7 @@ body {
 	 font: 1.3rem Inconsolata, monospace;
 	 text-shadow: 0 0 5px #c8c8c8;
 }
- body::after {
-	 content: "";
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 200%;
-	 background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
-	 pointer-events: none;
-}
- ::selection {
+ body::selection {
 	 background: #0080ff;
 	 text-shadow: none;
 }
@@ -35,4 +25,29 @@ body {
 .no-underline{
     text-decoration: none;
 	color: white;
+}
+
+.no-underline-box{
+    text-decoration: none;
+	color: white;
+	font: 1.0rem Inconsolata, monospace;
+	text-shadow: 0 0 5px #c8c8c8;
+	
+}
+
+.no-underline-button{
+    text-decoration: none;
+	color: white;
+	position:absolute; 
+	top:10px; 
+	right:50px;
+}
+
+ul {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+ul li {
+  flex: 1 0 25%;
 }
