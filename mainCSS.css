@@ -1,3 +1,38 @@
 body {
-  background-color: black;
+	 background-color: black;
+	 background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+	 margin: 0;
+	 overflow-x: hidden;
+	 overflow-y: auto;
+	 padding: 2rem;
+	 color: white;
+	 font: 1.3rem Inconsolata, monospace;
+	 text-shadow: 0 0 5px #c8c8c8;
+}
+ body::after {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 200%;
+	 background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+	 pointer-events: none;
+}
+ ::selection {
+	 background: #0080ff;
+	 text-shadow: none;
+}
+ pre {
+	 margin: 0;
+}
+
+.blink{
+  animation: blinker2 0.6s cubic-bezier(1, 0, 0, 1) infinite alternate;  
+}
+@keyframes blinker2 { to { opacity: 0; } }
+
+.no-underline{
+    text-decoration: none;
+	color: white;
 }
